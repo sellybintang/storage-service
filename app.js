@@ -7,6 +7,8 @@ const multer =require('multer')
 const router = require('./routes/index')
 const database = require('./database/database')
 const body_parser=require('body-parser')
+const compression = require('compression')
+
 
  
 database()
@@ -22,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
-
+app.use (compression())
 app.use(body_parser.json())
 
 

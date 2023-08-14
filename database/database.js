@@ -12,4 +12,4 @@ const database = module.exports=()=>{
     }
 }
 
-module.exports= database
+module.exports = database
